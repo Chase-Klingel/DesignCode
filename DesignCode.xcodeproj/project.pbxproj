@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6514DB7F21F56FEE00E9925C /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514DB7E21F56FEE00E9925C /* SectionViewController.swift */; };
 		65B6FE7721ED97D30008D506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6FE7621ED97D30008D506 /* AppDelegate.swift */; };
 		65B6FE7921ED97D30008D506 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6FE7821ED97D30008D506 /* HomeViewController.swift */; };
 		65B6FE7C21ED97D30008D506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6FE7A21ED97D30008D506 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6514DB7E21F56FEE00E9925C /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 		65B6FE7321ED97D30008D506 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B6FE7621ED97D30008D506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65B6FE7821ED97D30008D506 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				65B6FE7621ED97D30008D506 /* AppDelegate.swift */,
 				65B6FE7821ED97D30008D506 /* HomeViewController.swift */,
+				6514DB7E21F56FEE00E9925C /* SectionViewController.swift */,
 				65B6FE7A21ED97D30008D506 /* Main.storyboard */,
 				65B6FE7D21ED97D50008D506 /* Assets.xcassets */,
 				65B6FE7F21ED97D50008D506 /* LaunchScreen.storyboard */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6514DB7F21F56FEE00E9925C /* SectionViewController.swift in Sources */,
 				65B6FE7921ED97D30008D506 /* HomeViewController.swift in Sources */,
 				65B6FE7721ED97D30008D506 /* AppDelegate.swift in Sources */,
 			);

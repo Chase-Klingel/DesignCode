@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="u30-jp-n6t">
             <objects>
-                <viewController id="TAr-Cc-PEx" customClass="ViewController" customModule="DesignCodeApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="TAr-Cc-PEx" customClass="HomeViewController" customModule="DesignCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="413-VA-L0a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,6 +54,9 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <state key="normal" image="Action-Play-Small"/>
+                                                            <connections>
+                                                                <action selector="playButtonTapped:" destination="TAr-Cc-PEx" eventType="touchUpInside" id="7vX-uV-1AG"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </view>
@@ -340,10 +343,30 @@ design and code an iOS 11 app.</string>
                         <viewLayoutGuide key="safeArea" id="f0Z-F3-FCH"/>
                     </view>
                     <size key="freeformSize" width="375" height="2000"/>
+                    <connections>
+                        <outlet property="deviceImageView" destination="SYq-2q-aCy" id="Z1P-e4-q1J"/>
+                        <outlet property="playVisualView" destination="Hi4-02-a6R" id="aFA-zb-MTu"/>
+                        <outlet property="titleLabel" destination="CmN-gT-ytp" id="ET5-L0-ZTN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEY-Bf-9TQ" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+        </scene>
+        <!--Section View Controller-->
+        <scene sceneID="IBo-Cv-qO9">
+            <objects>
+                <viewController id="VXM-BT-1lX" customClass="SectionViewController" customModule="DesignCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZIc-Qy-aTl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eyW-rH-c9s"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DkI-Nl-h3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="-470"/>
         </scene>
     </scenes>
     <resources>
