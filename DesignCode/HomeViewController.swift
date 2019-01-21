@@ -9,11 +9,15 @@
 import UIKit
 import AVKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var playVisualView: UIVisualEffectView!
+    @IBOutlet weak var backgroundImageView: UIImageView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var heroView: UIView!
+    @IBOutlet weak var bookView: UIView!
     
     // [play][type][action]
     @IBAction func playButtonTapped(_ sender: Any) {
@@ -30,8 +34,12 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
+        scrollView.delegate = self
+        animateHeroViewOnLoad()
+    }
+    
+    private func animateHeroViewOnLoad() {
         titleLabel.alpha = 0
         deviceImageView.alpha = 0
         playVisualView.alpha = 0
