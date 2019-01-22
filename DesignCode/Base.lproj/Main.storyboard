@@ -310,7 +310,7 @@ design and code an iOS 11 app.</string>
                                                     <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
-                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="W4g-cm-7k6">
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="W4g-cm-7k6" customClass="SectionCollectionViewCell" customModule="DesignCode" customModuleProvider="target">
                                                         <rect key="frame" x="20" y="0.0" width="304" height="248"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -390,6 +390,11 @@ design and code an iOS 11 app.</string>
                                                             <constraint firstAttribute="trailing" secondItem="TUl-Fv-Y67" secondAttribute="trailing" id="wUc-FZ-9DU"/>
                                                         </constraints>
                                                         <size key="customSize" width="304" height="248"/>
+                                                        <connections>
+                                                            <outlet property="captionLabel" destination="7dw-9U-hqw" id="YYy-et-LMG"/>
+                                                            <outlet property="coverImageView" destination="es9-5S-bOj" id="DEo-zN-Gfo"/>
+                                                            <outlet property="titleLabel" destination="DSg-8t-Ne6" id="YhU-K5-yJs"/>
+                                                        </connections>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>

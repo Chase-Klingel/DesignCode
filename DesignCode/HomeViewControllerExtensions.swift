@@ -31,12 +31,17 @@ extension HomeViewController {
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return sections.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseId, for: indexPath) as! SectionCollectionViewCell
         
+        let section = sections[indexPath.row]
+        
+        cell.coverImageView.image = UIImage(named: section["image"]!)
+        cell.titleLabel.text = section["title"]
+        cell.captionLabel.text = section["caption"]
         return cell
     }
     
