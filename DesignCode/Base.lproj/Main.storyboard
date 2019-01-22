@@ -297,22 +297,111 @@ design and code an iOS 11 app.</string>
                                                 <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TfP-7y-PCA">
-                                                <rect key="frame" x="20" y="82" width="304" height="248"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gRu-eU-4zE">
+                                                <rect key="frame" x="0.0" y="82" width="375" height="248"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="304" id="Iuz-C1-oS0"/>
-                                                    <constraint firstAttribute="height" constant="248" id="lmU-Kn-cUa"/>
+                                                    <constraint firstAttribute="height" constant="248" id="FAE-uH-ESK"/>
                                                 </constraints>
-                                            </view>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="PYt-vO-p8f">
+                                                    <size key="itemSize" width="304" height="248"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="sectionCell" id="W4g-cm-7k6">
+                                                        <rect key="frame" x="20" y="0.0" width="304" height="248"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="248"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUl-Fv-Y67">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="248"/>
+                                                                    <subviews>
+                                                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onl-6g-or9">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="248"/>
+                                                                            <subviews>
+                                                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ios11" translatesAutoresizingMaskIntoConstraints="NO" id="es9-5S-bOj">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="304" height="248"/>
+                                                                                </imageView>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn iOS 11 Design" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSg-8t-Ne6">
+                                                                                    <rect key="frame" x="20" y="20" width="264" height="72"/>
+                                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A complete guide to colors, typography and layout for iOS 11" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dw-9U-hqw">
+                                                                                    <rect key="frame" x="20" y="187" width="264" height="41"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstItem="DSg-8t-Ne6" firstAttribute="leading" secondItem="Onl-6g-or9" secondAttribute="leading" constant="20" id="6WH-fq-x94"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="7dw-9U-hqw" secondAttribute="trailing" constant="20" id="9lO-6r-KaK"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="7dw-9U-hqw" secondAttribute="bottom" constant="20" id="C7A-BR-J0e"/>
+                                                                                <constraint firstItem="DSg-8t-Ne6" firstAttribute="top" secondItem="Onl-6g-or9" secondAttribute="top" constant="20" id="E0Q-fl-oUK"/>
+                                                                                <constraint firstItem="es9-5S-bOj" firstAttribute="top" secondItem="Onl-6g-or9" secondAttribute="top" id="Fdg-yF-XiI"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="es9-5S-bOj" secondAttribute="trailing" id="Qqf-5W-aqp"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="es9-5S-bOj" secondAttribute="bottom" id="XBv-bj-hmE"/>
+                                                                                <constraint firstItem="es9-5S-bOj" firstAttribute="leading" secondItem="Onl-6g-or9" secondAttribute="leading" id="XUJ-Us-0mH"/>
+                                                                                <constraint firstItem="7dw-9U-hqw" firstAttribute="leading" secondItem="Onl-6g-or9" secondAttribute="leading" constant="20" id="bK0-hs-4Z9"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="DSg-8t-Ne6" secondAttribute="trailing" constant="20" id="pil-Or-xyo"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                    <integer key="value" value="14"/>
+                                                                                </userDefinedRuntimeAttribute>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="trailing" secondItem="Onl-6g-or9" secondAttribute="trailing" id="1ZI-Yr-yOJ"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="Onl-6g-or9" secondAttribute="bottom" id="Ykv-pi-Yr9"/>
+                                                                        <constraint firstItem="Onl-6g-or9" firstAttribute="top" secondItem="TUl-Fv-Y67" secondAttribute="top" id="d8q-L5-64g"/>
+                                                                        <constraint firstItem="Onl-6g-or9" firstAttribute="leading" secondItem="TUl-Fv-Y67" secondAttribute="leading" id="v6w-dj-O6K"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                            <integer key="value" value="14"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                                                            <real key="value" value="0.25"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                                                            <size key="value" width="0.0" height="10"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                                                            <integer key="value" value="20"/>
+                                                                        </userDefinedRuntimeAttribute>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstItem="TUl-Fv-Y67" firstAttribute="top" secondItem="W4g-cm-7k6" secondAttribute="top" id="eg0-ek-qIG"/>
+                                                            <constraint firstItem="TUl-Fv-Y67" firstAttribute="leading" secondItem="W4g-cm-7k6" secondAttribute="leading" id="lpm-zD-dJb"/>
+                                                            <constraint firstAttribute="bottom" secondItem="TUl-Fv-Y67" secondAttribute="bottom" id="n8K-Vu-Hli"/>
+                                                            <constraint firstAttribute="trailing" secondItem="TUl-Fv-Y67" secondAttribute="trailing" id="wUc-FZ-9DU"/>
+                                                        </constraints>
+                                                        <size key="customSize" width="304" height="248"/>
+                                                    </collectionViewCell>
+                                                </cells>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="380" id="4lu-c2-JZa"/>
                                             <constraint firstItem="1hJ-ny-h1K" firstAttribute="top" secondItem="L5Y-Y6-ygd" secondAttribute="top" constant="50" id="DCr-mH-ugW"/>
-                                            <constraint firstAttribute="bottom" secondItem="TfP-7y-PCA" secondAttribute="bottom" constant="50" id="Q4n-7e-Z86"/>
+                                            <constraint firstItem="Q4d-dX-IXc" firstAttribute="bottom" secondItem="gRu-eU-4zE" secondAttribute="bottom" constant="50" id="MDf-Vj-ykc"/>
                                             <constraint firstAttribute="trailing" secondItem="1hJ-ny-h1K" secondAttribute="trailing" constant="20" id="eHs-ym-gJE"/>
-                                            <constraint firstItem="TfP-7y-PCA" firstAttribute="leading" secondItem="Q4d-dX-IXc" secondAttribute="leading" constant="20" id="uFh-D1-9dj"/>
+                                            <constraint firstItem="gRu-eU-4zE" firstAttribute="leading" secondItem="Q4d-dX-IXc" secondAttribute="leading" id="fKY-Uo-yTX"/>
+                                            <constraint firstItem="Q4d-dX-IXc" firstAttribute="trailing" secondItem="gRu-eU-4zE" secondAttribute="trailing" id="mSK-sk-ukO"/>
                                             <constraint firstItem="1hJ-ny-h1K" firstAttribute="leading" secondItem="Q4d-dX-IXc" secondAttribute="leading" constant="20" id="wAa-qw-mPX"/>
                                         </constraints>
                                         <viewLayoutGuide key="safeArea" id="Q4d-dX-IXc"/>
@@ -346,6 +435,7 @@ design and code an iOS 11 app.</string>
                     <connections>
                         <outlet property="backgroundImageView" destination="xNl-jh-8ab" id="MIu-2a-Ilc"/>
                         <outlet property="bookView" destination="eCT-cj-ixQ" id="8Z0-3i-eCY"/>
+                        <outlet property="chapterCollectionView" destination="gRu-eU-4zE" id="2wt-VC-e8q"/>
                         <outlet property="deviceImageView" destination="SYq-2q-aCy" id="Z1P-e4-q1J"/>
                         <outlet property="heroView" destination="zS3-s7-hNt" id="ncO-yj-Grm"/>
                         <outlet property="playVisualView" destination="Hi4-02-a6R" id="aFA-zb-MTu"/>
@@ -378,5 +468,6 @@ design and code an iOS 11 app.</string>
         <image name="Art-Book" width="133" height="150"/>
         <image name="Art-iPhoneX" width="129" height="326"/>
         <image name="Home" width="2880" height="1600"/>
+        <image name="ios11" width="2880" height="1600"/>
     </resources>
 </document>

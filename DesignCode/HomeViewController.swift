@@ -10,6 +10,7 @@ import UIKit
 import AVKit
 
 class HomeViewController: UIViewController, UIScrollViewDelegate {
+    let reuseId = "sectionCell"
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
@@ -32,10 +33,15 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    @IBOutlet weak var chapterCollectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         scrollView.delegate = self
+        chapterCollectionView.delegate = self
+        chapterCollectionView.dataSource = self
+        
         animateHeroViewOnLoad()
     }
     
