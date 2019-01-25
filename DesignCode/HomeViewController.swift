@@ -9,9 +9,10 @@
 import UIKit
 import AVKit
 
-class HomeViewController: UIViewController, UIScrollViewDelegate {
+class HomeViewController: UIViewController {
     let reuseId = "sectionCell"
-
+    let homeToSection =  "HomeToSection"
+    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var playVisualView: UIVisualEffectView!
@@ -19,7 +20,8 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var heroView: UIView!
     @IBOutlet weak var bookView: UIView!
-    
+    @IBOutlet weak var chapterCollectionView: UICollectionView!
+
     // [play][type][action]
     @IBAction func playButtonTapped(_ sender: Any) {
         let urlString = "https://player.vimeo.com/external/235468301.hd.mp4?s=e852004d6a46ce569fcf6ef02a7d291ea581358e&profile_id=175"
@@ -33,8 +35,6 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
-    @IBOutlet weak var chapterCollectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,6 +43,19 @@ class HomeViewController: UIViewController, UIScrollViewDelegate {
         chapterCollectionView.dataSource = self
         
         animateHeroViewOnLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("preparing")
+        if segue.identifier == homeToSection {
+            let toViewController = segue.destination as! SectionViewController
+            let indexPath = sender as! IndexPath
+            let section = sections[indexPath.row]
+            
+            toViewController.section = section
+            toViewController.sections = sections
+            toViewController.indexPath = indexPath
+        }
     }
     
     private func animateHeroViewOnLoad() {
