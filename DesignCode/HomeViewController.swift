@@ -21,6 +21,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var heroView: UIView!
     @IBOutlet weak var bookView: UIView!
     @IBOutlet weak var chapterCollectionView: UICollectionView!
+    var isStatusBarHidden = false
 
     // [play][type][action]
     @IBAction func playButtonTapped(_ sender: Any) {
@@ -43,10 +44,19 @@ class HomeViewController: UIViewController {
         chapterCollectionView.dataSource = self
         
         animateHeroViewOnLoad()
+        setStatusBarBackgroundColor(color: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.5))
+    }
+    
+    func setStatusBarBackgroundColor(color: UIColor) {
+        guard let statusBar = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else { return }
+        statusBar.backgroundColor = color
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("preparing")
         if segue.identifier == homeToSection {
             let toViewController = segue.destination as! SectionViewController
             let indexPath = sender as! IndexPath
@@ -55,7 +65,28 @@ class HomeViewController: UIViewController {
             toViewController.section = section
             toViewController.sections = sections
             toViewController.indexPath = indexPath
+            
+            isStatusBarHidden = true
+            UIView.animate(withDuration: 0.5, animations: {
+                self.setNeedsStatusBarAppearanceUpdate()
+            })
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        isStatusBarHidden = false
+        UIView.animate(withDuration: 0.5) {
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return isStatusBarHidden
+    }
+    
+    override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+        return .slide
     }
     
     private func animateHeroViewOnLoad() {

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="never" translatesAutoresizingMaskIntoConstraints="NO" id="7er-0e-fET">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="2000"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1980"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zS3-s7-hNt" userLabel="Hero View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="452"/>
@@ -445,10 +445,11 @@ design and code an iOS 11 app.</string>
                             <constraint firstAttribute="bottom" secondItem="7er-0e-fET" secondAttribute="bottom" id="DOI-bq-ZI9"/>
                             <constraint firstItem="7er-0e-fET" firstAttribute="leading" secondItem="413-VA-L0a" secondAttribute="leading" id="HXL-wV-hkf"/>
                             <constraint firstAttribute="trailing" secondItem="7er-0e-fET" secondAttribute="trailing" id="VUj-YH-oib"/>
-                            <constraint firstItem="7er-0e-fET" firstAttribute="top" secondItem="413-VA-L0a" secondAttribute="top" id="qJH-Wa-h2p"/>
+                            <constraint firstItem="7er-0e-fET" firstAttribute="top" secondItem="f0Z-F3-FCH" secondAttribute="top" id="qJH-Wa-h2p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="f0Z-F3-FCH"/>
                     </view>
+                    <navigationItem key="navigationItem" id="P1j-oX-ceM"/>
                     <size key="freeformSize" width="375" height="2000"/>
                     <connections>
                         <outlet property="backgroundImageView" destination="xNl-jh-8ab" id="MIu-2a-Ilc"/>
@@ -464,7 +465,7 @@ design and code an iOS 11 app.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TEY-Bf-9TQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.00492610837438"/>
+            <point key="canvasLocation" x="1076" y="132.23388305847078"/>
         </scene>
         <!--Section View Controller-->
         <scene sceneID="IBo-Cv-qO9">
@@ -610,6 +611,7 @@ design and code an iOS 11 app.</string>
                             <constraint firstItem="iGD-2n-eLa" firstAttribute="top" secondItem="ZIc-Qy-aTl" secondAttribute="top" constant="20" id="sHA-zG-qvP"/>
                             <constraint firstAttribute="trailing" secondItem="iGD-2n-eLa" secondAttribute="trailing" constant="20" id="yoV-ZB-80K"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="gs6-QV-jOU"/>
                     </view>
                     <connections>
                         <outlet property="bodyLabel" destination="6zZ-ut-Kbz" id="D3F-pK-RIC"/>
@@ -621,7 +623,7 @@ design and code an iOS 11 app.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkI-Nl-h3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="-467"/>
+            <point key="canvasLocation" x="1911.2" y="-467.3163418290855"/>
         </scene>
         <!--Testimonial View Controller-->
         <scene sceneID="Ay6-4X-rE2">
@@ -820,6 +822,7 @@ design and code an iOS 11 app.</string>
                             <constraint firstAttribute="bottom" secondItem="g89-I1-sUu" secondAttribute="bottom" id="n4v-hE-CPf"/>
                             <constraint firstItem="g89-I1-sUu" firstAttribute="leading" secondItem="64O-HV-gr5" secondAttribute="leading" id="n6j-2F-CjV"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="zDK-Sa-Wfm"/>
                     </view>
                     <connections>
                         <outlet property="testimonialCollectionView" destination="M1b-ys-c8A" id="D7V-cD-FMh"/>
@@ -827,7 +830,7 @@ design and code an iOS 11 app.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zaI-D8-5Rh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="563"/>
+            <point key="canvasLocation" x="1911.2" y="562.21889055472263"/>
         </scene>
     </scenes>
     <resources>
