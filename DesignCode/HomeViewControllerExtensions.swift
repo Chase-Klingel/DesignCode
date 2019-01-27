@@ -11,6 +11,10 @@ import UIKit
 extension HomeViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
+        
+        let navigationIsHidden = offsetY <= 0
+        navigationController?.setNavigationBarHidden(navigationIsHidden, animated: true)
+        
         if offsetY < 0 {
             heroView.transform = CGAffineTransform(translationX: 0, y: offsetY)
             playVisualView.transform = CGAffineTransform(translationX: 0, y: -offsetY/3)
