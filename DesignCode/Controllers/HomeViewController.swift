@@ -10,9 +10,6 @@ import UIKit
 import AVKit
 
 class HomeViewController: UIViewController {
-    let reuseId = "sectionCell"
-    let homeToSection =  "HomeToSection"
-    
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var deviceImageView: UIImageView!
     @IBOutlet weak var playVisualView: UIVisualEffectView!
@@ -58,7 +55,7 @@ class HomeViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == homeToSection {
+        if segue.identifier == Constants.homeToSection {
             let toViewController = segue.destination as! SectionViewController
             let indexPath = sender as! IndexPath
             let section = sections[indexPath.row]

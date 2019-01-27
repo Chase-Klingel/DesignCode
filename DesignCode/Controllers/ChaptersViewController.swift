@@ -8,9 +8,7 @@
 
 import UIKit
 
-class ChaptersViewController: UIViewController {
-    var reuseId = "sectionCell"
-    
+class ChaptersViewController: UIViewController {    
     @IBOutlet weak var chapter1CollectionView: UICollectionView!
     
     override func viewDidLoad() {

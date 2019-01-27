@@ -14,7 +14,7 @@ extension ChaptersViewController: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseId, for: indexPath) as! SectionCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.sectionCell, for: indexPath) as! SectionCollectionViewCell
         
         let section = sections[indexPath.row]
         
