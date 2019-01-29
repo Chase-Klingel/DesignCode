@@ -12,6 +12,7 @@ struct Constants {
     // MARK: - Reuse Identifiers
     
     static let sectionCell = "sectionCell"
+    static let bookmarkCell = "bookmarkCell"
     
     // MARK: - Segue Identifiers
     
