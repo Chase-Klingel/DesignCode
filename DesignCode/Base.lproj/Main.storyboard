@@ -606,7 +606,7 @@ design and code an iOS 11 app.</string>
                                             <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
                                             <state key="normal" image="Action-Close"/>
                                             <connections>
-                                                <action selector="closeButtonTapped:" destination="VXM-BT-1lX" eventType="touchUpInside" id="CB3-vt-mg3"/>
+                                                <segue destination="Qnc-Mb-I8H" kind="unwind" unwindAction="unwindToViewController:" id="QNG-pA-hhy"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -649,6 +649,7 @@ design and code an iOS 11 app.</string>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkI-Nl-h3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Qnc-Mb-I8H" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3574" y="577"/>
         </scene>
@@ -912,7 +913,7 @@ design and code an iOS 11 app.</string>
                     </tableView>
                     <navigationItem key="navigationItem" title="Bookmarks" id="yyi-Br-goC"/>
                     <connections>
-                        <segue destination="VXM-BT-1lX" kind="presentation" identifier="" id="CPh-i6-OcH"/>
+                        <segue destination="VXM-BT-1lX" kind="presentation" identifier="BookmarksToSection" id="CPh-i6-OcH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I0C-jt-RfA" userLabel="First Responder" sceneMemberID="firstResponder"/>

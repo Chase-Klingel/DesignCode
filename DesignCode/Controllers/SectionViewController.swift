@@ -18,10 +18,6 @@ class SectionViewController: UIViewController {
     var sections: [[String: String]]!
     var indexPath: IndexPath!
     
-    @IBAction func closeButtonTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

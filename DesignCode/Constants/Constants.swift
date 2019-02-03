@@ -18,7 +18,7 @@ struct Constants {
     
     static let homeToSection = "HomeToSection"
     static let moreToWeb = "MoreToWeb"
-    
+    static let bookmarksToSection = "BookmarksToSection"
     // MARK: - WebViewController Constants
     
     static let loading = "Loading..."
