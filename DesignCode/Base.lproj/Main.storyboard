@@ -1155,7 +1155,7 @@ design and code an iOS 11 app.</string>
         <!--More-->
         <scene sceneID="z2K-Pb-9Ic">
             <objects>
-                <viewController id="cIw-9m-j1R" sceneMemberID="viewController">
+                <viewController id="cIw-9m-j1R" customClass="MoreViewController" customModule="DesignCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G3t-3Z-LGu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="751"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1233,6 +1233,9 @@ design and code an iOS 11 app.</string>
                                                                 <state key="normal" title="Read on Safari" image="More/safari">
                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="safariButtonTapped:" destination="cIw-9m-j1R" eventType="touchUpInside" id="KdW-6X-L7H"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFw-mm-q7m">
                                                                 <rect key="frame" x="0.0" y="180.5" width="335" height="59"/>
@@ -1243,6 +1246,9 @@ design and code an iOS 11 app.</string>
                                                                 <state key="normal" title="Community" image="More/community">
                                                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </state>
+                                                                <connections>
+                                                                    <action selector="communityButtonTapped:" destination="cIw-9m-j1R" eventType="touchUpInside" id="ZwE-MY-ZRf"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khn-WL-Ttm">
                                                                 <rect key="frame" x="0.0" y="240.5" width="335" height="59.5"/>
@@ -1286,6 +1292,9 @@ design and code an iOS 11 app.</string>
                                                         <state key="normal" title="Button" image="More/twitter">
                                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="0.099315068493150679" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="twitterButtonTapped:" destination="cIw-9m-j1R" eventType="touchUpInside" id="XBJ-mB-TC0"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.94117647058823528" green="0.95294117647058818" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

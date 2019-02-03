@@ -21,6 +21,22 @@ class WebViewController: UIViewController {
         let request = URLRequest(url: url)
         
         webView.load(request)
+        
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+    }
+    
+    deinit {
+        webView.removeObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress))
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == Constants.estimatedProgress {
+            if webView.estimatedProgress == 1.0 {
+                navigationItem.title = webView.title
+            } else {
+                navigationItem.title = Constants.loading
+            }
+        }
     }
     
     @IBAction func doneButtonTapped(_ sender: Any) {

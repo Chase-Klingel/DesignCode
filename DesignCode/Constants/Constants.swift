@@ -17,4 +17,10 @@ struct Constants {
     // MARK: - Segue Identifiers
     
     static let homeToSection = "HomeToSection"
+    static let moreToWeb = "MoreToWeb"
+    
+    // MARK: - WebViewController Constants
+    
+    static let loading = "Loading..."
+    static let estimatedProgress = "estimatedProgress"
 }
