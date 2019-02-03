@@ -19,6 +19,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var bookView: UIView!
     @IBOutlet weak var chapterCollectionView: UICollectionView!
     var isStatusBarHidden = false
+    
+    let presentSectionViewController = PresentSectionViewController()
 
     // [play][type][action]
     @IBAction func playButtonTapped(_ sender: Any) {
@@ -56,13 +58,20 @@ class HomeViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Constants.homeToSection {
-            let toViewController = segue.destination as! SectionViewController
+            let destination = segue.destination as! SectionViewController
             let indexPath = sender as! IndexPath
             let section = sections[indexPath.row]
             
-            toViewController.section = section
-            toViewController.sections = sections
-            toViewController.indexPath = indexPath
+            destination.section = section
+            destination.sections = sections
+            destination.indexPath = indexPath
+            destination.transitioningDelegate = self
+            
+            let attributes = chapterCollectionView.layoutAttributesForItem(at: indexPath)!
+            let cellFrame = chapterCollectionView.convert(attributes.frame, to: view)
+            
+            presentSectionViewController.cellFrame = cellFrame
+            presentSectionViewController.cellTransform = animateCell(cellFrame: cellFrame)
             
             isStatusBarHidden = true
             UIView.animate(withDuration: 0.5, animations: {

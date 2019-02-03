@@ -563,10 +563,10 @@ design and code an iOS 11 app.</string>
                                         <constraints>
                                             <constraint firstItem="Idn-D5-4gJ" firstAttribute="top" secondItem="Brn-UN-wlv" secondAttribute="top" id="4H2-RI-LPR"/>
                                             <constraint firstAttribute="bottom" secondItem="4j8-JK-VYz" secondAttribute="bottom" constant="30" id="4V3-kR-WzZ"/>
-                                            <constraint firstAttribute="height" constant="420" id="6lS-k5-t77"/>
+                                            <constraint firstAttribute="height" priority="999" constant="420" id="6lS-k5-t77"/>
                                             <constraint firstAttribute="trailing" secondItem="Idn-D5-4gJ" secondAttribute="trailing" id="86r-Ez-2Du"/>
                                             <constraint firstItem="laz-BA-UOD" firstAttribute="leading" secondItem="wbh-cX-h29" secondAttribute="leading" constant="20" id="8nW-fz-nXE"/>
-                                            <constraint firstAttribute="bottom" secondItem="Idn-D5-4gJ" secondAttribute="bottom" id="IKB-qw-SoM"/>
+                                            <constraint firstAttribute="bottom" secondItem="Idn-D5-4gJ" secondAttribute="bottom" priority="999" id="IKB-qw-SoM"/>
                                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4j8-JK-VYz" secondAttribute="trailing" constant="20" symbolic="YES" id="L6S-x1-CWd"/>
                                             <constraint firstItem="EiU-eS-Lct" firstAttribute="leading" secondItem="Brn-UN-wlv" secondAttribute="leading" constant="20" id="SW1-AA-C4z"/>
                                             <constraint firstItem="Idn-D5-4gJ" firstAttribute="leading" secondItem="Brn-UN-wlv" secondAttribute="leading" id="TwQ-oK-Pa0"/>
@@ -584,6 +584,7 @@ design and code an iOS 11 app.</string>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Brn-UN-wlv" firstAttribute="leading" secondItem="qgO-nx-hdU" secondAttribute="leading" id="Pzv-6f-eXA"/>
                                     <constraint firstItem="6zZ-ut-Kbz" firstAttribute="top" secondItem="Brn-UN-wlv" secondAttribute="bottom" constant="30" id="ZEd-v9-TVt"/>
@@ -629,12 +630,11 @@ design and code an iOS 11 app.</string>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="qgO-nx-hdU" firstAttribute="top" secondItem="ZIc-Qy-aTl" secondAttribute="top" id="6mu-gZ-ikO"/>
                             <constraint firstItem="qgO-nx-hdU" firstAttribute="leading" secondItem="ZIc-Qy-aTl" secondAttribute="leading" id="9Pg-g3-hNR"/>
-                            <constraint firstAttribute="trailing" secondItem="qgO-nx-hdU" secondAttribute="trailing" id="HZ7-e2-ArQ"/>
-                            <constraint firstAttribute="bottom" secondItem="qgO-nx-hdU" secondAttribute="bottom" id="NER-Lf-baV"/>
+                            <constraint firstAttribute="trailing" secondItem="qgO-nx-hdU" secondAttribute="trailing" priority="999" id="HZ7-e2-ArQ"/>
+                            <constraint firstAttribute="bottom" secondItem="qgO-nx-hdU" secondAttribute="bottom" priority="999" id="NER-Lf-baV"/>
                             <constraint firstItem="iGD-2n-eLa" firstAttribute="top" secondItem="ZIc-Qy-aTl" secondAttribute="top" constant="20" id="sHA-zG-qvP"/>
                             <constraint firstAttribute="trailing" secondItem="iGD-2n-eLa" secondAttribute="trailing" constant="20" id="yoV-ZB-80K"/>
                         </constraints>
@@ -643,8 +643,12 @@ design and code an iOS 11 app.</string>
                     <connections>
                         <outlet property="bodyLabel" destination="6zZ-ut-Kbz" id="D3F-pK-RIC"/>
                         <outlet property="captionLabel" destination="4j8-JK-VYz" id="ea0-VK-GFH"/>
+                        <outlet property="closeVisualEffectView" destination="iGD-2n-eLa" id="fdP-ia-OOu"/>
                         <outlet property="coverImageView" destination="Idn-D5-4gJ" id="AYV-eg-Rfx"/>
+                        <outlet property="coverView" destination="Brn-UN-wlv" id="6Ox-OV-fzU"/>
                         <outlet property="progressLabel" destination="Sno-1m-iES" id="Xgz-HL-q7U"/>
+                        <outlet property="scrollView" destination="qgO-nx-hdU" id="ZVa-Fv-NE9"/>
+                        <outlet property="subheadVisualEffectView" destination="EiU-eS-Lct" id="6vO-Mi-fqW"/>
                         <outlet property="titleLabel" destination="laz-BA-UOD" id="oVH-04-fRv"/>
                     </connections>
                 </viewController>

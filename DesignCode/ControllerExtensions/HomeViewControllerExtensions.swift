@@ -84,3 +84,11 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
 }
+
+extension HomeViewController : UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return presentSectionViewController
+    }
+}
