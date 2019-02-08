@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Spring
 
 class SectionViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
@@ -24,6 +25,8 @@ class SectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let springView = SpringView()
         
         titleLabel.text = section["title"]
         captionLabel.text = section["caption"]
