@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65110C8F220D208B00B3378D /* InteractionPanToClose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65110C8E220D208B00B3378D /* InteractionPanToClose.swift */; };
 		6514DB7F21F56FEE00E9925C /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514DB7E21F56FEE00E9925C /* SectionViewController.swift */; };
 		6514DB8121F5758000E9925C /* HomeViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514DB8021F5758000E9925C /* HomeViewControllerExtensions.swift */; };
 		6514DB8321F6BCF600E9925C /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514DB8221F6BCF600E9925C /* Data.swift */; };
@@ -27,9 +28,11 @@
 		65B6FE7C21ED97D30008D506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6FE7A21ED97D30008D506 /* Main.storyboard */; };
 		65B6FE7E21ED97D50008D506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B6FE7D21ED97D50008D506 /* Assets.xcassets */; };
 		65B6FE8121ED97D50008D506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6FE7F21ED97D50008D506 /* LaunchScreen.storyboard */; };
+		65BB6AAC220D268B00BB7D3D /* PurchaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB6AAB220D268B00BB7D3D /* PurchaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65110C8E220D208B00B3378D /* InteractionPanToClose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractionPanToClose.swift; sourceTree = "<group>"; };
 		6514DB7E21F56FEE00E9925C /* SectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 		6514DB8021F5758000E9925C /* HomeViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerExtensions.swift; sourceTree = "<group>"; };
 		6514DB8221F6BCF600E9925C /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		65B6FE7D21ED97D50008D506 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65B6FE8021ED97D50008D506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65B6FE8221ED97D50008D506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65BB6AAB220D268B00BB7D3D /* PurchaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +157,8 @@
 				65B6FE7F21ED97D50008D506 /* LaunchScreen.storyboard */,
 				65B6FE8221ED97D50008D506 /* Info.plist */,
 				656126A222077A90008EBBDE /* PresentSectionViewController.swift */,
+				65110C8E220D208B00B3378D /* InteractionPanToClose.swift */,
+				65BB6AAB220D268B00BB7D3D /* PurchaseViewController.swift */,
 			);
 			path = DesignCode;
 			sourceTree = "<group>";
@@ -244,7 +250,9 @@
 				65B6FE7721ED97D30008D506 /* AppDelegate.swift in Sources */,
 				6561269C22066FA8008EBBDE /* WebViewController.swift in Sources */,
 				6561268C21FE51D9008EBBDE /* ChaptersViewController.swift in Sources */,
+				65110C8F220D208B00B3378D /* InteractionPanToClose.swift in Sources */,
 				6561269A220019D5008EBBDE /* BookmarkTableViewCell.swift in Sources */,
+				65BB6AAC220D268B00BB7D3D /* PurchaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

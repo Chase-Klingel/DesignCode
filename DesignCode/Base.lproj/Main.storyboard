@@ -1498,17 +1498,38 @@ design and code an iOS 11 app.</string>
             </objects>
             <point key="canvasLocation" x="7521" y="-416"/>
         </scene>
-        <!--Purchase-->
+        <!--View Controller-->
         <scene sceneID="ofv-3N-eaf">
             <objects>
-                <viewController title="Purchase" id="LVJ-8J-4Ml" sceneMemberID="viewController">
+                <viewController title="Purchase" id="LVJ-8J-4Ml" customClass="PurchaseViewController" customModule="DesignCode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K03-bV-zv3">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jj6-fB-Ug4">
+                                <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="MGg-Zk-pvA">
+                                    <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="extraLight"/>
+                            </visualEffectView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvh-pf-Wuu">
                                 <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurring billing, cancel anytime." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C0A-yt-Uzi">
+                                        <rect key="frame" x="254.5" y="825" width="259.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YYl-V1-Usw">
+                                        <rect key="frame" x="134" y="856" width="500" height="100"/>
+                                        <string key="text">If you choose to purchase a subscription, payment will be charged to your iTunes account, and your account will be charged within 24-hour to the end of the current period. Auto-renewal may be turned off at any time by going to your setting in your iTunes store after purchase. For more information, please visit our Terms of Service and Privacy Policy.</string>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3lE-Lp-lAo" userLabel="Dialog View">
                                         <rect key="frame" x="134" y="194" width="500" height="616"/>
                                         <subviews>
@@ -1901,11 +1922,16 @@ design and code an iOS 11 app.</string>
                                     </view>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="YYl-V1-Usw" firstAttribute="trailing" secondItem="3lE-Lp-lAo" secondAttribute="trailing" id="1gx-8Q-nUQ"/>
+                                    <constraint firstItem="YYl-V1-Usw" firstAttribute="top" secondItem="C0A-yt-Uzi" secondAttribute="bottom" constant="10.5" id="5nt-XN-lj9"/>
                                     <constraint firstItem="3lE-Lp-lAo" firstAttribute="centerY" secondItem="nvh-pf-Wuu" secondAttribute="centerY" id="Erl-Q4-haY"/>
                                     <constraint firstItem="3lE-Lp-lAo" firstAttribute="top" secondItem="nvh-pf-Wuu" secondAttribute="top" constant="20" id="L4r-vD-2QA"/>
                                     <constraint firstItem="3lE-Lp-lAo" firstAttribute="leading" secondItem="nvh-pf-Wuu" secondAttribute="leading" constant="20" id="dlc-h6-TzO"/>
-                                    <constraint firstAttribute="bottom" secondItem="3lE-Lp-lAo" secondAttribute="bottom" constant="20" id="p84-T4-zZE"/>
+                                    <constraint firstAttribute="bottom" secondItem="YYl-V1-Usw" secondAttribute="bottom" constant="20" id="e8o-Pk-7zU"/>
+                                    <constraint firstItem="YYl-V1-Usw" firstAttribute="leading" secondItem="3lE-Lp-lAo" secondAttribute="leading" id="pdY-e2-JLJ"/>
                                     <constraint firstAttribute="trailing" secondItem="3lE-Lp-lAo" secondAttribute="trailing" constant="20" id="rVA-X1-Wb9"/>
+                                    <constraint firstItem="C0A-yt-Uzi" firstAttribute="centerX" secondItem="nvh-pf-Wuu" secondAttribute="centerX" id="sCR-S8-wXy"/>
+                                    <constraint firstItem="C0A-yt-Uzi" firstAttribute="top" secondItem="3lE-Lp-lAo" secondAttribute="bottom" constant="15" id="vjU-bD-B1I"/>
                                     <constraint firstItem="3lE-Lp-lAo" firstAttribute="centerX" secondItem="nvh-pf-Wuu" secondAttribute="centerX" id="ycm-0Q-5b5"/>
                                 </constraints>
                                 <variation key="default">
@@ -1939,14 +1965,29 @@ design and code an iOS 11 app.</string>
                         </subviews>
                         <constraints>
                             <constraint firstItem="dou-ej-fyW" firstAttribute="bottom" secondItem="nvh-pf-Wuu" secondAttribute="bottom" id="0N2-22-hq2"/>
+                            <constraint firstItem="dou-ej-fyW" firstAttribute="trailing" secondItem="jj6-fB-Ug4" secondAttribute="trailing" id="Khr-Z5-WjZ"/>
                             <constraint firstItem="dou-ej-fyW" firstAttribute="trailing" secondItem="nvh-pf-Wuu" secondAttribute="trailing" id="VUX-Df-V4f"/>
                             <constraint firstItem="nvh-pf-Wuu" firstAttribute="top" secondItem="dou-ej-fyW" secondAttribute="top" id="jGp-ce-Cw1"/>
+                            <constraint firstItem="dou-ej-fyW" firstAttribute="bottom" secondItem="jj6-fB-Ug4" secondAttribute="bottom" id="mAr-AS-KWv"/>
                             <constraint firstItem="nvh-pf-Wuu" firstAttribute="leading" secondItem="dou-ej-fyW" secondAttribute="leading" id="s1L-Wi-VQC"/>
+                            <constraint firstItem="jj6-fB-Ug4" firstAttribute="top" secondItem="dou-ej-fyW" secondAttribute="top" id="xiY-HI-IiL"/>
+                            <constraint firstItem="jj6-fB-Ug4" firstAttribute="leading" secondItem="dou-ej-fyW" secondAttribute="leading" id="zlM-DX-Tzk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dou-ej-fyW"/>
                     </view>
+                    <connections>
+                        <outlet property="panToClose" destination="lP8-eQ-Ddb" id="s4y-8m-MAW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFF-1Q-K1f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="lP8-eQ-Ddb" customClass="InteractionPanToClose" customModule="DesignCode" customModuleProvider="target">
+                    <connections>
+                        <outlet property="dialogView" destination="3lE-Lp-lAo" id="UQE-Iu-E8P"/>
+                        <outlet property="scrollView" destination="nvh-pf-Wuu" id="ou8-U4-s6Y"/>
+                        <outlet property="viewController" destination="LVJ-8J-4Ml" id="0Bn-S9-Swg"/>
+                        <outlet property="visualEffectView" destination="jj6-fB-Ug4" id="RZc-3a-5D9"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="7520.3125" y="379.6875"/>
         </scene>
