@@ -16,5 +16,11 @@ class DiscountViewController: UIViewController {
         
         panToClose.setGestureRecognizer()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        panToClose.animateDialogAppear()
+    }
 
 }
