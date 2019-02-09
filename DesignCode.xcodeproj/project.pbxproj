@@ -144,6 +144,7 @@
 		6561269F2207780B008EBBDE /* ClassExtensions */ = {
 			isa = PBXGroup;
 			children = (
+				65BB6AB1220D5AD200BB7D3D /* UILabel+Inspectable.swift */,
 				65BB6AAD220D2B3000BB7D3D /* InteractionPanToCloseExtension.swift */,
 				656126A022077839008EBBDE /* UIViewControllerExtensions.swift */,
 			);
@@ -153,7 +154,6 @@
 		65B6FE6A21ED97D30008D506 = {
 			isa = PBXGroup;
 			children = (
-				65BB6AB1220D5AD200BB7D3D /* UILabel+Inspectable.swift */,
 				65B6FE7521ED97D30008D506 /* DesignCode */,
 				65B6FE7421ED97D30008D506 /* Products */,
 				D6A2F4F2D8B347BD0964228D /* Pods */,
@@ -273,10 +273,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DesignCode/Pods-DesignCode-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
+				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
