@@ -33,6 +33,7 @@
 		65BB6AB0220D5A2500BB7D3D /* DiscountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB6AAF220D5A2500BB7D3D /* DiscountViewController.swift */; };
 		65BB6AB2220D5AD200BB7D3D /* UILabel+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB6AB1220D5AD200BB7D3D /* UILabel+Inspectable.swift */; };
 		65BB6AB4220F74E100BB7D3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB6AB3220F74E100BB7D3D /* LoginViewController.swift */; };
+		65BB6AB62210B88900BB7D3D /* UILabel+Animate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BB6AB52210B88900BB7D3D /* UILabel+Animate.swift */; };
 		FEE08D56C4241FDAABCA3C52 /* Pods_DesignCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C1A3E19B568C95CF198A531 /* Pods_DesignCode.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		65BB6AAF220D5A2500BB7D3D /* DiscountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountViewController.swift; sourceTree = "<group>"; };
 		65BB6AB1220D5AD200BB7D3D /* UILabel+Inspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Inspectable.swift"; sourceTree = "<group>"; };
 		65BB6AB3220F74E100BB7D3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		65BB6AB52210B88900BB7D3D /* UILabel+Animate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Animate.swift"; sourceTree = "<group>"; };
 		85A855F412523C0890C70CC0 /* Pods-DesignCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCode.release.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCode/Pods-DesignCode.release.xcconfig"; sourceTree = "<group>"; };
 		AE0D3C6007DCFCDF32FC63AF /* Pods-DesignCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DesignCode.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DesignCode/Pods-DesignCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				65BB6AB1220D5AD200BB7D3D /* UILabel+Inspectable.swift */,
+				65BB6AB52210B88900BB7D3D /* UILabel+Animate.swift */,
 				65BB6AAD220D2B3000BB7D3D /* InteractionPanToCloseExtension.swift */,
 				656126A022077839008EBBDE /* UIViewControllerExtensions.swift */,
 			);
@@ -275,11 +278,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DesignCode/Pods-DesignCode-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MKRingProgressView/MKRingProgressView.framework",
 				"${BUILT_PRODUCTS_DIR}/Spring/Spring.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKRingProgressView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Spring.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
@@ -329,6 +334,7 @@
 				6561268E21FE5250008EBBDE /* ChaptersViewControllerExtensions.swift in Sources */,
 				6542AE4221F81E77008F3E48 /* TestimonialCollectionViewCell.swift in Sources */,
 				65BB6AAE220D2B3000BB7D3D /* InteractionPanToCloseExtension.swift in Sources */,
+				65BB6AB62210B88900BB7D3D /* UILabel+Animate.swift in Sources */,
 				656126A322077A90008EBBDE /* PresentSectionViewController.swift in Sources */,
 				65B6FE7721ED97D30008D506 /* AppDelegate.swift in Sources */,
 				6561269C22066FA8008EBBDE /* WebViewController.swift in Sources */,
