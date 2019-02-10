@@ -1557,6 +1557,9 @@ design and code an iOS 11 app.</string>
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Excercises" image="Tab Bar/exercises-active" selectedImage="Tab Bar/exercises-active" id="0jc-fQ-UMC"/>
+                    <connections>
+                        <segue destination="qs1-fK-ke0" kind="presentation" identifier="PresentExerciseDialog" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="PKS-RP-ce4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvm-sd-bZR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -3222,6 +3225,107 @@ design and code an iOS 11 app.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eLH-1E-qZ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="8710" y="-438"/>
+        </scene>
+        <!--Exercise Dialog-->
+        <scene sceneID="gZt-OJ-DeN">
+            <objects>
+                <viewController id="qs1-fK-ke0" userLabel="Exercise Dialog" customClass="ExerciseDialogViewController" customModule="DesignCode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nqv-hl-mDn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x34-7p-S6d" userLabel="Dialog View" customClass="DesignableView" customModule="Spring">
+                                <rect key="frame" x="77" y="238" width="260" height="260"/>
+                                <subviews>
+                                    <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hlf-Zd-3GZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="bKv-9h-Ft0">
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="260"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WqP-8G-gtR">
+                                                    <rect key="frame" x="78.666666666666657" y="20" width="103" height="36"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're currently doing:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHm-fT-LVC">
+                                                    <rect key="frame" x="39.666666666666686" y="56" width="181" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xgy-GI-3VB" customClass="MKRingProgressView" customModule="MKRingProgressView">
+                                                    <rect key="frame" x="57" y="94" width="146" height="146"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XrH-NE-Hq8">
+                                                            <rect key="frame" x="35.666666666666657" y="43" width="75" height="60"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="XrH-NE-Hq8" firstAttribute="centerX" secondItem="Xgy-GI-3VB" secondAttribute="centerX" id="Gik-fi-0u4"/>
+                                                        <constraint firstAttribute="width" constant="146" id="YJi-LL-5wT"/>
+                                                        <constraint firstAttribute="height" constant="146" id="Z72-SR-lPh"/>
+                                                        <constraint firstItem="XrH-NE-Hq8" firstAttribute="centerY" secondItem="Xgy-GI-3VB" secondAttribute="centerY" id="pz9-hT-9jA"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                                            <color key="value" red="0.84705882349999995" green="0.16862745100000001" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                                            <color key="value" red="0.46666666670000001" green="0.10980392160000001" blue="0.78039215689999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="backgroundRingColor">
+                                                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Xgy-GI-3VB" secondAttribute="bottom" constant="20" id="DIZ-5i-pYx"/>
+                                                <constraint firstItem="WqP-8G-gtR" firstAttribute="centerX" secondItem="bKv-9h-Ft0" secondAttribute="centerX" id="LXZ-2h-Jmv"/>
+                                                <constraint firstItem="fHm-fT-LVC" firstAttribute="top" secondItem="WqP-8G-gtR" secondAttribute="bottom" id="PcM-8f-EAH"/>
+                                                <constraint firstItem="WqP-8G-gtR" firstAttribute="top" secondItem="bKv-9h-Ft0" secondAttribute="top" constant="20" id="Qwn-Wr-Oeh"/>
+                                                <constraint firstItem="fHm-fT-LVC" firstAttribute="centerX" secondItem="bKv-9h-Ft0" secondAttribute="centerX" id="cTH-bq-QmF"/>
+                                                <constraint firstItem="Xgy-GI-3VB" firstAttribute="centerX" secondItem="bKv-9h-Ft0" secondAttribute="centerX" id="oby-kt-bRU"/>
+                                            </constraints>
+                                        </view>
+                                        <blurEffect style="dark"/>
+                                    </visualEffectView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="hlf-Zd-3GZ" secondAttribute="trailing" id="AT7-SC-OJc"/>
+                                    <constraint firstAttribute="height" constant="260" id="LRn-Ne-khh"/>
+                                    <constraint firstAttribute="width" constant="260" id="NxR-sb-YHh"/>
+                                    <constraint firstAttribute="bottom" secondItem="hlf-Zd-3GZ" secondAttribute="bottom" id="jGm-oy-gQu"/>
+                                    <constraint firstItem="hlf-Zd-3GZ" firstAttribute="leading" secondItem="x34-7p-S6d" secondAttribute="leading" id="mis-gE-Kc4"/>
+                                    <constraint firstItem="hlf-Zd-3GZ" firstAttribute="top" secondItem="x34-7p-S6d" secondAttribute="top" id="qgK-ta-Hym"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="28"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="x34-7p-S6d" firstAttribute="centerY" secondItem="Nqv-hl-mDn" secondAttribute="centerY" id="Rgj-VB-SzY"/>
+                            <constraint firstItem="x34-7p-S6d" firstAttribute="centerX" secondItem="Nqv-hl-mDn" secondAttribute="centerX" id="lnU-18-3pl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pma-mj-JvR"/>
+                    </view>
+                    <connections>
+                        <outlet property="dialogView" destination="x34-7p-S6d" id="rlo-Pd-kSs"/>
+                        <outlet property="progressLabel" destination="XrH-NE-Hq8" id="I4x-Re-2aG"/>
+                        <outlet property="progressView" destination="Xgy-GI-3VB" id="3GW-RJ-nE5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wF0-j5-oGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6564" y="311"/>
         </scene>
     </scenes>
     <resources>

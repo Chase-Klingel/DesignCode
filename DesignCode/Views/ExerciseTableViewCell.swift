@@ -22,18 +22,6 @@ class ExerciseTableViewCell: UITableViewCell {
 
 }
 
-extension ExerciseTableViewCell: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print("questions count \(questions.count)")
-        return questions.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.questionCell, for: indexPath) as UICollectionViewCell
-        
-        return cell
-    }
 
-}
 
 
