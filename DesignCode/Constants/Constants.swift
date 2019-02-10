@@ -14,6 +14,8 @@ struct Constants {
     static let sectionCell = "sectionCell"
     static let bookmarkCell = "bookmarkCell"
     static let excerciseCell = "ExcerciseCell"
+    static let questionCell = "QuestionCell"
+    
     // MARK: - Segue Identifiers
     
     static let homeToSection = "HomeToSection"

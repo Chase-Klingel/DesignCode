@@ -1132,7 +1132,7 @@ design and code an iOS 11 app.</string>
         <!--Excercises-->
         <scene sceneID="edo-Yv-8Am">
             <objects>
-                <tableViewController id="SxW-oi-jWC" sceneMemberID="viewController">
+                <tableViewController id="SxW-oi-jWC" customClass="ExerciseTableViewController" customModule="DesignCode" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eSC-sE-2Ha">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
