@@ -48,7 +48,7 @@ class BookmarksTableTableViewController: UITableViewController {
             let destination = segue.destination as! SectionViewController
             destination.section = sections[0]
             destination.sections = sections
-            destination.indexPath = sender as! IndexPath
+            destination.indexPath = sender as? IndexPath
         }
     }
     

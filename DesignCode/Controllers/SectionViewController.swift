@@ -25,9 +25,7 @@ class SectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let springView = SpringView()
-        
+                
         titleLabel.text = section["title"]
         captionLabel.text = section["caption"]
         bodyLabel.text = section["body"]

@@ -79,7 +79,6 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("did select item")
         performSegue(withIdentifier: Constants.homeToSection, sender: indexPath)
     }
     
