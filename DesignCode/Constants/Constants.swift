@@ -16,13 +16,15 @@ struct Constants {
     static let excerciseCell = "ExcerciseCell"
     static let questionCell = "QuestionCell"
     static let scoreCell = "ScoreCell"
-    
+
     // MARK: - Segue Identifiers
     
     static let homeToSection = "HomeToSection"
     static let moreToWeb = "MoreToWeb"
     static let bookmarksToSection = "BookmarksToSection"
     static let presentExerciseDialog = "PresentExerciseDialog"
+    static let benefits = "Benefits"
+    
     // MARK: - WebViewController Constants
     
     static let loading = "Loading..."
