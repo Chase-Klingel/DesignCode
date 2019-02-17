@@ -30,6 +30,7 @@
 		657A1C6D2216828E0026939B /* WebViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657A1C6C2216828E0026939B /* WebViewController.storyboard */; };
 		657A1C712216841A0026939B /* Dialog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657A1C702216841A0026939B /* Dialog.storyboard */; };
 		657A1C74221685FC0026939B /* Section.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 657A1C73221685FC0026939B /* Section.storyboard */; };
+		657A1C77221A0EBE0026939B /* UILabel+DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657A1C76221A0EBE0026939B /* UILabel+DynamicType.swift */; };
 		65B6FE7721ED97D30008D506 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6FE7621ED97D30008D506 /* AppDelegate.swift */; };
 		65B6FE7921ED97D30008D506 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B6FE7821ED97D30008D506 /* HomeViewController.swift */; };
 		65B6FE7C21ED97D30008D506 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B6FE7A21ED97D30008D506 /* Main.storyboard */; };
@@ -76,6 +77,7 @@
 		657A1C6C2216828E0026939B /* WebViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WebViewController.storyboard; sourceTree = "<group>"; };
 		657A1C702216841A0026939B /* Dialog.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Dialog.storyboard; sourceTree = "<group>"; };
 		657A1C73221685FC0026939B /* Section.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Section.storyboard; sourceTree = "<group>"; };
+		657A1C76221A0EBE0026939B /* UILabel+DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+DynamicType.swift"; sourceTree = "<group>"; };
 		65B6FE7321ED97D30008D506 /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65B6FE7621ED97D30008D506 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65B6FE7821ED97D30008D506 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +179,7 @@
 				65BB6AB52210B88900BB7D3D /* UILabel+Animate.swift */,
 				65BB6AAD220D2B3000BB7D3D /* InteractionPanToCloseExtensions.swift */,
 				656126A022077839008EBBDE /* UIViewControllerExtensions.swift */,
+				657A1C76221A0EBE0026939B /* UILabel+DynamicType.swift */,
 			);
 			path = ClassExtensions;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				65BB6AAE220D2B3000BB7D3D /* InteractionPanToCloseExtensions.swift in Sources */,
 				65BB6AB62210B88900BB7D3D /* UILabel+Animate.swift in Sources */,
 				65BB6ABC2210D0E500BB7D3D /* ExerciseDialogViewController.swift in Sources */,
+				657A1C77221A0EBE0026939B /* UILabel+DynamicType.swift in Sources */,
 				65BB6ABA2210C97500BB7D3D /* ExerciseTableViewController.swift in Sources */,
 				656126A322077A90008EBBDE /* PresentSectionViewController.swift in Sources */,
 				65B6FE7721ED97D30008D506 /* AppDelegate.swift in Sources */,
