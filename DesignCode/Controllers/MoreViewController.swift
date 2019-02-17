@@ -19,6 +19,24 @@ class MoreViewController: UIViewController {
     @IBOutlet weak var progress2Label: UILabel!
     @IBOutlet weak var progress3Label: UILabel!
     
+    @IBOutlet weak var dialogView: UIView!
+    @IBOutlet var panToClose: InteractionPanToClose!
+    
+    @IBAction func tappedOutsideDialog(_ sender: Any) {
+        UIView.animate(withDuration: 0.5, animations: {
+            self.panToClose.rotateDialogOut()
+        }) {
+            (finished) in
+            self.tabBarController?.selectedViewController = self.previousViewController
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    weak var previousViewController: UIViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,7 +86,7 @@ extension MKRingProgressView {
         CATransaction.setAnimationDuration(1.0)
         
         self.progress = Double(number)/100
-        
+    
         CATransaction.commit()
     }
 }

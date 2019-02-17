@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Ambience
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-//        UITabBar.appearance().barTintColor = .black
-//        UITabBar.appearance().tintColor = .white
+        
+        let ambience = Ambience.shared
+        
+        ambience.insert([
+            .invert(upper: 0.2),
+            .regular(lower: 0.1, upper: 1.0),
+            .contrast(lower: nil),
+        ])
         
         return true
     }
