@@ -8,10 +8,6 @@
 
 import UIKit
 
-class Data: NSObject {
-    
-}
-
 let benefits : Array<Dictionary<String,String>> = [
     [
         "subhead": "Watch and follow",
