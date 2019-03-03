@@ -21,7 +21,7 @@ class HomeViewController: UIViewController {
     var isStatusBarHidden = false
     
     let presentSectionViewController = PresentSectionViewController()
-    var sections: Array<Dictionary<String, String>> = ContentAPI.shared.sections
+    var sections: Array<Section> = ContentAPI.shared.sections
 
     // [play][type][action]
     @IBAction func playButtonTapped(_ sender: Any) {

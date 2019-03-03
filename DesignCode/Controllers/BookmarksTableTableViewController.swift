@@ -10,7 +10,7 @@ import UIKit
 
 class BookmarksTableTableViewController: UITableViewController {
     var bookmarks: [[String: String]] = allBookmarks
-    var sections: Array<Dictionary<String, String>> = ContentAPI.shared.sections
+    var sections: Array<Section> = ContentAPI.shared.sections
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

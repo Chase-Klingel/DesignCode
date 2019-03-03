@@ -10,7 +10,7 @@ import UIKit
 
 class ChaptersViewController: UIViewController {    
     @IBOutlet weak var chapter1CollectionView: UICollectionView!
-    var sections: Array<Dictionary<String, String>> = ContentAPI.shared.sections
+    var sections: Array<Section> = ContentAPI.shared.sections
 
     override func viewDidLoad() {
         super.viewDidLoad()
