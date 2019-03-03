@@ -22,6 +22,42 @@ struct Section : Codable {
     }
 }
 
+struct Bookmark : Codable {
+    var typeName : String
+    var chapterNumber : String
+    var sectionTitle : String
+    var partHeading : String
+    var content : String
+    
+    enum BookmarkType : String {
+        case text, image, video, code
+    }
+    
+    var type :  BookmarkType?
+
+    enum CodingKeys : String, CodingKey {
+        case content
+        case sectionTitle = "section"
+        case partHeading = "part"
+        case typeName = "type"
+        case chapterNumber = "chapter"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        typeName = try values.decode(String.self, forKey: .typeName)
+        chapterNumber = try values.decode(String.self, forKey: .chapterNumber)
+        sectionTitle = try values.decode(String.self, forKey: .sectionTitle)
+        partHeading = try values.decode(String.self, forKey: .partHeading)
+        content = try values.decode(String.self, forKey: .content)
+        
+        type = BookmarkType(rawValue: typeName)
+    }
+}
+
+
+
+
 class ContentAPI {
     static var shared : ContentAPI = ContentAPI()
     
@@ -37,6 +73,25 @@ class ContentAPI {
             let sections = try decoder.decode(Array<Section>.self, from: data)
             
             return sections
+        } catch {
+            print(error)
+        }
+        
+        return []
+    }()
+    
+    lazy var bookmarks : Array<Bookmark> = {
+        guard let path = Bundle.main.path(forResource: "Bookmarks", ofType: "json") else { return [] }
+        let url = URL(fileURLWithPath: path)
+        
+        guard let data = try? Data(contentsOf: url) else { return [] }
+        
+        do {
+            let decoder = JSONDecoder()
+            decoder.dateDecodingStrategy = .secondsSince1970
+            let bookmarks = try decoder.decode(Array<Bookmark>.self, from: data)
+            
+            return bookmarks
         } catch {
             print(error)
         }
