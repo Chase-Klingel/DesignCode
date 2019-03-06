@@ -16,7 +16,7 @@ protocol ScoreCellDelegate: class {
 
 class ScoreCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var percentageView: MKRingProgressView!
+    @IBOutlet weak var percentageView: RingProgressView!
     @IBOutlet weak var percentageLabel: UILabel!
     var exercise: Array<Dictionary<String, Any>>!
     

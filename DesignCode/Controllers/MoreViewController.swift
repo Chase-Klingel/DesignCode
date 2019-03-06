@@ -11,9 +11,9 @@ import MKRingProgressView
 
 class MoreViewController: UIViewController {
 
-    @IBOutlet weak var progress1View: MKRingProgressView!
-    @IBOutlet weak var progress2View: MKRingProgressView!
-    @IBOutlet weak var progress3View: MKRingProgressView!
+    @IBOutlet weak var progress1View: RingProgressView!
+    @IBOutlet weak var progress2View: RingProgressView!
+    @IBOutlet weak var progress3View: RingProgressView!
     
     @IBOutlet weak var progress1Label: UILabel!
     @IBOutlet weak var progress2Label: UILabel!
@@ -80,7 +80,7 @@ class MoreViewController: UIViewController {
     }
 }
 
-extension MKRingProgressView {
+extension RingProgressView {
     func animateTo(_ number: Int) {
         CATransaction.begin()
         CATransaction.setAnimationDuration(1.0)

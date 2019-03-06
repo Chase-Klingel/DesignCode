@@ -33,12 +33,11 @@ struct PartCodable : Codable {
         case text, image, video, code
     }
     
-    var type :  PartType?
+    var type : PartType?
 
     enum CodingKeys : String, CodingKey {
         case id, title, content
         case typeName = "type"
-      
     }
     
     init(from decoder: Decoder) throws {

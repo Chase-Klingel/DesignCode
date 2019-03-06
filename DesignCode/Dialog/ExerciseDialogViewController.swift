@@ -12,7 +12,7 @@ import MKRingProgressView
 class ExerciseDialogViewController: UIViewController {
     
     @IBOutlet weak var dialogView: UIView!
-    @IBOutlet weak var progressView: MKRingProgressView!
+    @IBOutlet weak var progressView: RingProgressView!
     @IBOutlet weak var progressLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
